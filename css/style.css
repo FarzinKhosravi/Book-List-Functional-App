@@ -1,0 +1,22 @@
+@import url("./fonts.css");
+
+/* CSS Reset */
+*,
+*::after,
+*::before {
+  font-family: "iranyekan";
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Root Variables */
+
+/* :root {} */
+
+/* HTML */
+
+html {
+  font-size: 62.5%;
+}
