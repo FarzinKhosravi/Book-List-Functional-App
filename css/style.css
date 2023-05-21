@@ -4,19 +4,74 @@
 *,
 *::after,
 *::before {
-  font-family: "iranyekan";
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 /* Root Variables */
 
-/* :root {} */
+:root {
+  --bodyColor: #f9fafb;
+}
 
 /* HTML */
-
 html {
   font-size: 62.5%;
+}
+
+/* Body */
+body {
+  font-family: "Cinzel";
+  background-color: var(--bodyColor);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.app__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  flex: 0.1;
+  padding-top: 2rem;
+}
+
+.app__logo-wrapper {
+  display: flex;
+  width: 7rem;
+  justify-content: end;
+  margin-bottom: -10px;
+}
+
+.app__title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.app__logo {
+  font-size: 2.5rem;
+  color: #3730a3;
+}
+
+.app__horizontal-line {
+  width: 100%;
+  background-color: #fbbf24;
+  height: 2px;
 }
