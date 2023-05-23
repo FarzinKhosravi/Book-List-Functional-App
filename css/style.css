@@ -24,7 +24,8 @@ html {
 /* Body */
 body {
   font-family: "Cinzel";
-  background-color: var(--bodyColor);
+  /* background-color: var(--bodyColor); */
+  background-color: #efefef;
 }
 
 .wrapper {
@@ -32,7 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 2rem;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .app {
@@ -41,6 +42,8 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .app__header {
@@ -74,4 +77,35 @@ body {
   width: 100%;
   background-color: #fbbf24;
   height: 2px;
+}
+
+.app__books-section {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  width: 100%;
+  flex: 0.8;
+}
+
+.app__empty-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.app__list-image-wrapper {
+  height: 16.5rem;
+}
+
+.app__list-image {
+  width: 100%;
+  height: 100%;
+}
+
+.app__list-text-wrapper {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
