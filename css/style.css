@@ -109,3 +109,35 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
+.app__books-list-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__books-list-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__books-list-specs {
+  display: flex;
+  flex-direction: row;
+  width: 66rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.books-list-specs__wrapper {
+  display: flex;
+  flex-direction: row;
+  /* background-color: red; */
+  width: 45rem;
+  justify-content: space-evenly;
+}
+
+.app__books-list-horizontal-line {
+  width: 100%;
+  background-color: #e11d48;
+  height: 2px;
+}
