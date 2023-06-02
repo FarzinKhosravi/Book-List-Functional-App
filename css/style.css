@@ -54,6 +54,7 @@ body {
   width: 100%;
   flex: 0.1;
   padding-top: 2rem;
+  user-select: none;
 }
 
 .app__logo-wrapper {
@@ -95,6 +96,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin-bottom: 3rem;
+  user-select: none;
 }
 
 .app__list-image-wrapper {
@@ -114,17 +117,27 @@ body {
 .app__books-list-section {
   display: flex;
   flex-direction: column;
+  margin-bottom: 6rem;
 }
 
 .app__books-list-header {
   display: flex;
   flex-direction: column;
+  user-select: none;
+}
+
+.books-list-specs__title,
+.books-list-specs__author,
+.books-list-specs__read {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
 }
 
 .app__books-list-specs {
   display: flex;
   flex-direction: row;
-  width: 66rem;
+  width: 77rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -188,4 +201,151 @@ body {
 .app__button-icon {
   font-size: 1.5rem;
   color: #0a0a0a;
+}
+
+.app__book {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  margin-top: 1rem;
+}
+
+.book__title-wrapper,
+.book__author,
+.book__read {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.book__author-read {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 32rem;
+  /* background-color: red; */
+}
+
+.book__specs-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 101rem;
+}
+
+.book__buttons-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 51rem;
+}
+
+/* .button {
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  background-color: silver;
+  font-size: 2rem;
+  font-family: "Cinzel";
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+} */
+
+.book__book-delete-button {
+  margin-left: 5rem;
+}
+
+.book__delete-button {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.book__delete-button:after {
+  content: "";
+  background-color: #ec1616;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.book__delete-button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .book__delete-button {
+    padding: 13px 50px 13px;
+  }
+}
+
+.book__edit-button {
+  background-color: transparent;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  color: #00132c;
+  font-family: "Avenir Next LT W01 Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 23px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.book__edit-button:hover,
+.book__edit-button:active {
+  outline: 0;
+}
+
+.book__edit-button:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.book__edit-button:before {
+  background-color: #ffee8d;
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+.book__edit-button:hover:before {
+  background-color: #ffe54c;
+}
+
+@media (min-width: 768px) {
+  .book__edit-button {
+    padding: 16px 32px;
+  }
+}
+
+.button {
+  font-family: "Cinzel";
 }
