@@ -55,6 +55,7 @@ body {
   flex: 0.1;
   padding-top: 2rem;
   user-select: none;
+  margin-bottom: 3rem;
 }
 
 .app__logo-wrapper {
@@ -82,12 +83,16 @@ body {
 }
 
 .app__books-section {
-  /* background-color: blue; */
   display: flex;
   flex-direction: column;
   height: 50px;
   width: 100%;
   flex: 0.8;
+
+  /* *** ADD STYLE BELOW *** */
+  /* justify-content: center;
+  align-items: center;
+  min-height: 487px; */
 }
 
 .app__empty-list {
@@ -145,7 +150,7 @@ body {
 .books-list-specs__wrapper {
   display: flex;
   flex-direction: row;
-  width: 45rem;
+  width: 54rem;
   justify-content: space-evenly;
 }
 
@@ -349,3 +354,5 @@ body {
 .button {
   font-family: "Cinzel";
 }
+
+/* Add New Book Form Component */
