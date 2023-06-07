@@ -21,8 +21,78 @@
     />
   </head>
   <body>
-    <div>
-      <!-- *** -->
+    <div id="container">
+      <div class="form-wrapper">
+        <div class="form-header">
+          <div class="form-headline">
+            <div class="form-title-wrapper">
+              <span class="form-title">Add a New Book</span>
+            </div>
+            <div class="form-close">
+              <span class="form-close-icon">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+          <div class="form-horizontal-line"></div>
+        </div>
+        <form class="form">
+          <div class="form__inputs-wrapper">
+            <div class="form__title-input">
+              <label class="label title-input" for="title-input">Title</label>
+              <!-- <span class="form-icon form__book-icon">
+                <i class="fas fa-book"></i>
+              </span> -->
+              <input
+                type="text"
+                class="input"
+                id="title-input"
+                placeholder="Enter Title Please ..."
+              />
+              <span class="form-icon form__book-icon">
+                <i class="fas fa-book"></i>
+              </span>
+            </div>
+            <div class="form__author-input">
+              <label class="label author-input" for="author-input"
+                >Author</label
+              >
+              <!-- <span class="form-icon form__user-icon">
+                <i class="far fa-user"></i>
+              </span> -->
+              <input
+                type="text"
+                class="input"
+                id="author-input"
+                placeholder="Enter Author Please ..."
+              />
+              <span class="form-icon form__user-icon">
+                <i class="far fa-user"></i>
+              </span>
+            </div>
+            <div class="form__read-input">
+              <input type="checkbox" class="input" id="read-input" />
+              <label class="label read-input" for="read-input">
+                <span>
+                  <svg width="12px" height="10px">
+                    <use xlink:href="#check-4"></use></svg
+                ></span>
+                <!-- <span>Morning</span> -->
+              </label>
+              <svg class="inline-svg">
+                <symbol id="check-4" viewbox="0 0 12 10">
+                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                </symbol>
+              </svg>
+              <span class="read-input-text"> Did you Read the Book? </span>
+            </div>
+          </div>
+          <div class="form__buttons">
+            <button class="form-btn form__add-button">Add</button>
+            <button class="form-btn form__reset-button">Reset</button>
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>
