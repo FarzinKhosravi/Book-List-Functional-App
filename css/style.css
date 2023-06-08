@@ -60,15 +60,37 @@ body {
 
 .app__logo-wrapper {
   display: flex;
-  width: 7rem;
+  width: 11rem;
   justify-content: end;
-  margin-bottom: -10px;
+  margin-bottom: -54px;
+}
+
+.app__title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .app__title {
+  display: inline-block;
   font-size: 2rem;
   font-weight: bold;
-  color: #1f2937;
+  background-image: linear-gradient(
+    to right,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: -47px;
+}
+
+.app__guide {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .app__logo {
@@ -136,7 +158,19 @@ body {
 .books-list-specs__read {
   font-size: 2rem;
   font-weight: bold;
-  color: #000;
+  color: #250b65;
+  /* *** */
+  /* 
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 45%,
+    rgba(148, 187, 233, 1) 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+
+  /* *** */
 }
 
 .app__books-list-specs {
@@ -215,6 +249,7 @@ body {
   align-items: center;
   padding: 1.2rem 0;
   margin-top: 1rem;
+  max-width: 1309px;
 }
 
 .book__title-wrapper,
@@ -376,6 +411,7 @@ body {
   min-height: 400px;
   background-color: #ccc;
   padding: 2rem;
+  border-radius: 5px;
 }
 
 .form-header {
@@ -389,6 +425,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 0.3rem;
+  margin-bottom: 0.4rem;
   /* position: relative; */
 }
 
@@ -738,4 +775,50 @@ body {
 
 .form__reset-button::before {
   background: #dc2626;
+}
+
+.app-title {
+  font: 9rem "Montserrat";
+  width: 250px;
+  margin-bottom: -8px;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+  stroke: #4d163d;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+  stroke: #840037;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+  stroke: #bd0034;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+  stroke: #bd0034;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+  stroke: #fdb731;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
 }
