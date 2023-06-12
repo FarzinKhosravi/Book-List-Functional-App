@@ -35,6 +35,10 @@ body {
   align-items: center;
   padding: 0 2rem;
   /* height: 100vh; */
+  /* *** */
+  flex-direction: column;
+  position: relative;
+  /* *** */
 }
 
 .app {
@@ -392,17 +396,17 @@ body {
 
 /* Add New Book Form Component */
 
-#container {
-  display: flex;
+/* #container { */
+/* display: flex;
   justify-content: center;
   align-items: center;
   max-width: 1500px;
   margin: 0 auto;
-  width: 50%;
-  /* * Remember !! * */
-  margin-top: 2rem;
-  padding: 2rem 0;
-}
+  width: 50%; */
+/* * Remember !! * */
+/* margin-top: 2rem;
+  padding: 2rem 0; */
+/* } */
 
 .form-wrapper {
   display: flex;
@@ -820,5 +824,142 @@ body {
 @keyframes stroke-offset {
   100% {
     stroke-dashoffset: -35%;
+  }
+}
+
+/* * Add New Book Modal  * */
+
+/* BackDrop Section */
+
+.backdrop {
+  /* display: none; */
+  position: absolute;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  /* background-color: transparent; */
+  background-color: #28282807;
+  min-height: 100vh;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  /* left: 0; */
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Glowing Section */
+
+.glowing-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  /* background: #000; */
+  background: transparent;
+  overflow: hidden;
+}
+
+.glowing {
+  position: relative;
+  min-width: 700px;
+  height: 550px;
+  margin: -150px;
+  transform-origin: right;
+  animation: colorChange 5s linear infinite;
+}
+
+.glowing:nth-child(even) {
+  transform-origin: left;
+}
+
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.glowing span {
+  position: absolute;
+  top: calc(80px * var(--i));
+  left: calc(80px * var(--i));
+  bottom: calc(80px * var(--i));
+  right: calc(80px * var(--i));
+}
+
+.glowing span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  background: #f00;
+  border-radius: 50%;
+}
+
+.glowing span:nth-child(3n + 1)::before {
+  background: rgba(134, 255, 0, 1);
+  box-shadow: 0 0 20px rgba(134, 255, 0, 1), 0 0 40px rgba(134, 255, 0, 1),
+    0 0 60px rgba(134, 255, 0, 1), 0 0 80px rgba(134, 255, 0, 1),
+    0 0 0 8px rgba(134, 255, 0, 0.1);
+}
+
+.glowing span:nth-child(3n + 2)::before {
+  background: rgba(255, 214, 0, 1);
+  box-shadow: 0 0 20px rgba(255, 214, 0, 1), 0 0 40px rgba(255, 214, 0, 1),
+    0 0 60px rgba(255, 214, 0, 1), 0 0 80px rgba(255, 214, 0, 1),
+    0 0 0 8px rgba(255, 214, 0, 0.1);
+}
+
+.glowing span:nth-child(3n + 3)::before {
+  background: rgba(0, 226, 255, 1);
+  box-shadow: 0 0 20px rgba(0, 226, 255, 1), 0 0 40px rgba(0, 226, 255, 1),
+    0 0 60px rgba(0, 226, 255, 1), 0 0 80px rgba(0, 226, 255, 1),
+    0 0 0 8px rgba(0, 226, 255, 0.1);
+}
+
+.glowing span:nth-child(3n + 1) {
+  animation: animate 10s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 2) {
+  animation: animate-reverse 3s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 3) {
+  animation: animate 8s alternate infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
   }
 }
