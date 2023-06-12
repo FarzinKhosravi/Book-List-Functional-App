@@ -963,3 +963,19 @@ body {
     transform: rotate(0deg);
   }
 }
+
+/* Modal Section */
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 50%;
+  position: absolute;
+  z-index: 20;
+  /* * Remember !! * */
+  /* margin-top: 2rem;
+  padding: 2rem 0; */
+}
