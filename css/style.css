@@ -831,8 +831,26 @@ body {
 
 /* BackDrop Section */
 
+/* *** */
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 50%;
+  position: absolute;
+  z-index: 20;
+  transition: all 0.5s ease-in-out;
+  /* * REMEMBER * */
+  transform: translateY(-200vh);
+  opacity: 0;
+}
+
+/* *** */
+
 .backdrop {
-  /* display: none; */
   position: absolute;
   width: 100%;
   max-width: 1500px;
@@ -846,7 +864,8 @@ body {
   /* left: 0; */
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
-  transition: all 0.2s ease-in-out;
+  /* * REMEMBER * */
+  display: none;
 }
 
 /* Glowing Section */
@@ -966,7 +985,7 @@ body {
 
 /* Modal Section */
 
-.modal {
+/* .modal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -975,7 +994,5 @@ body {
   width: 50%;
   position: absolute;
   z-index: 20;
-  /* * Remember !! * */
-  /* margin-top: 2rem;
-  padding: 2rem 0; */
-}
+
+} */
