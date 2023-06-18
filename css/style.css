@@ -721,8 +721,6 @@ body {
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
 }
 
