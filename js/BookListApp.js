@@ -94,3 +94,12 @@ function createBook() {
 
   // return;
 }
+
+function createBooksList(book) {
+  // *** REMEMBER *** //
+  if (typeof book === "string") return null;
+
+  booksList = [...booksList, book];
+
+  return booksList;
+}
