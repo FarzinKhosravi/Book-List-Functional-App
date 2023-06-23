@@ -109,7 +109,9 @@ function createBook() {
   }
 }
 
-  return "error : please enter title or author !!";
+function createBooksList(book) {
+  return (booksList = [...booksList, book]);
+}
 
   // else {
   //   if (titleInputValue === "" || authorInputValue === "") {
