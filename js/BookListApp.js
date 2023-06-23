@@ -119,11 +119,8 @@ function sortBooksList(booksList) {
   });
 }
 
-function createBooksList(book) {
-  // *** REMEMBER *** //
-  if (typeof book === "string") return null;
+// Local Storage :
 
-  booksList = [...booksList, book];
-
-  return booksList;
+function saveBooksList(booksList) {
+  localStorage.setItem("booksList", JSON.stringify(booksList));
 }
