@@ -50,13 +50,9 @@ function hideModal() {
 function addBook(event) {
   event.preventDefault();
 
-  const book = createBook();
+  // console.log("clicked add book button !!");
 
-  // console.log(book);
-
-  booksList = createBooksList(book);
-
-  // console.log(booksList);
+  createBook();
 }
 
 function createBook() {
@@ -64,10 +60,12 @@ function createBook() {
   const authorInput = document.querySelector("#author-input");
   const readInput = document.querySelector("#read-input");
 
+  // Get values from user :
   const titleInputValue = titleInput.value;
   const authorInputValue = authorInput.value;
 
   if (titleInputValue && authorInputValue) {
+    // create book :
     const book = {
       id: new Date().getTime(),
       insertedDate: new Date().toISOString(),
@@ -76,13 +74,40 @@ function createBook() {
       read: false,
     };
 
+    // remove style invalid inputs :
+    titleInput.classList.remove("invalid");
+    authorInput.classList.remove("invalid");
+
     if (readInput.checked) {
+      //  When user checks read option :
       book.read = true;
 
-      return book;
+      booksList = createBooksList(book);
+      booksList = sortBooksList(booksList);
+      // save books list in local storage :
+      saveBooksList(booksList);
+      // console.log("sorted1:", booksList);
+    } else {
+      booksList = createBooksList(book);
+      booksList = sortBooksList(booksList);
+      saveBooksList(booksList);
+      // console.log("sorted2:", booksList);
     }
-    return book;
+  } else {
+    // When user doesn't enter information in inputs :
+    if (titleInputValue === "" || authorInputValue === "") {
+      if (titleInputValue === "") {
+        titleInput.classList.add("invalid");
+        titleInput.focus();
+        // console.log("title");
+      } else {
+        authorInput.classList.add("invalid");
+        authorInput.focus();
+        // console.log("author");
+      }
+    }
   }
+}
 
   return "error : please enter title or author !!";
 

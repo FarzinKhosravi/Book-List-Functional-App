@@ -577,6 +577,10 @@ body {
   opacity: 0;
 }
 
+.invalid {
+  border: 5px solid red;
+}
+
 /* *** */
 
 .form__read-input {
