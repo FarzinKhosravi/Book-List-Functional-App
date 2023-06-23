@@ -113,13 +113,10 @@ function createBooksList(book) {
   return (booksList = [...booksList, book]);
 }
 
-  // else {
-  //   if (titleInputValue === "" || authorInputValue === "") {
-  //     // console.log("empty string !!");
-  //   }
-  // }
-
-  // return;
+function sortBooksList(booksList) {
+  return booksList.sort((a, b) => {
+    return new Date(a.insertedDate) > new Date(b.insertedDate) ? -1 : 1;
+  });
 }
 
 function createBooksList(book) {
